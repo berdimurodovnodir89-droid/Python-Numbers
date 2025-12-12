@@ -1,12 +1,12 @@
 from num2words import num2words
 
-masofa = float(input('masofa :'))
-kelishi = 5.00
-km = 0.80
+first_price = float(input('First_price :'))
+second_price = float(input('Second_price :'))
+third_price = float(input('Third_price :'))
 
-result = (masofa * km) + kelishi
-words_en = num2words(result, lang='en',to='currency')
-words_ru = num2words(result, lang='ru',to='currency')
+result = first_price + second_price + third_price 
 
-print(f'Taxi narxi :{result}')
-print(words_en,words_ru)
+total_words = num2words(result, lang='en', to='currency')
+
+print(f'umumiy summa {result}')
+print(f'{total_words}')
