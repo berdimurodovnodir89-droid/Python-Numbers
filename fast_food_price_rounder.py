@@ -1,21 +1,12 @@
 from num2words import num2words
 
-food01 = float(input("Food Price: "))
-food02 = float(input("Food Price: "))
-food03 = float(input("Food Price: "))
+masofa = float(input('masofa :'))
+kelishi = 5.00
+km = 0.80
 
-price = round(food01 + food02 + food03, 1)
+result = (masofa * km) + kelishi
+words_en = num2words(result, lang='en',to='currency')
+words_ru = num2words(result, lang='ru',to='currency')
 
-words_en = num2words(
-    price, 
-    to='currency', 
-    currency='USD'
-)
-words_ru = num2words(
-    price, 
-    lang='ru', 
-    to='currency', 
-    currency='USD'
-)
-
-print(price, words_en, words_ru)
+print(f'Taxi narxi :{result}')
+print(words_en,words_ru)
